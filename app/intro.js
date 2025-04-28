@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 //Tipos de datos y como se traspilan de typescript a javascript
 let saludo = "Hola mundo"; //string
 let edad = 25; //number
@@ -47,6 +48,7 @@ function duplicar(valor) {
 }
 let resultado = duplicar(5); // 5
 let resultado2 = duplicar("Hola"); // "Hola"
+//Uso de interfaces para definir la estructura de un objeto
 let usuario = {
     nombre: "Juan",
     edad: 25,

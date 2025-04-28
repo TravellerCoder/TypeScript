@@ -1,3 +1,5 @@
+import { UsuarioConDireccion } from "../interfaces/export";
+
 //Tipos de datos y como se traspilan de typescript a javascript
 
 
@@ -69,21 +71,6 @@ let resultado2 = duplicar<string>("Hola"); // "Hola"
 
 //Uso de interfaces para definir la estructura de un objeto
 
-interface Usuario {
-    nombre: string;
-    edad: number;
-    esEstudiante: boolean;
-}
-
-interface Direccion {
-    calle: string;
-    ciudad: string;
-    pais: string;
-}
-
-interface UsuarioConDireccion extends Usuario, Direccion { //Interfaz que hereda de otras interfaces
-    telefono: string;
-}
 
 let usuario: UsuarioConDireccion = {
     nombre: "Juan",

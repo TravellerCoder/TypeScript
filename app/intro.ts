@@ -26,3 +26,44 @@ enum diasDeLaSemana {
 }
 
 let hoy : diasDeLaSemana = diasDeLaSemana.Lunes; //Enum
+
+//Funciones con tipos y parametros de retorno 
+
+function saludar (nombre: string):string {
+    return `Hola como estas ${nombre}`;
+}
+
+console.log(saludar("Juan"));
+
+function saludar2 (nombre: string) : void{
+    console.log(`Hola ${nombre} nuevamente desde TypeScript `);
+}
+
+saludar2("Juan");
+
+//Clases con propiedades y metodos tipados 
+
+class Producto {
+    constructor( public nombre: string, public precio: number) {}
+    mostrarDetalle(): void {
+        console.log(`El producto ${this.nombre} tiene un precio de ${this.precio}`);
+    }
+}
+
+let producto1 = new Producto("Camiseta", 20);
+producto1.mostrarDetalle(); // El producto Camiseta tiene un precio de 20
+
+type Semaforo = "rojo" | "amarillo" | "verde"; //Union de tipos
+
+let colorDelSemaforo: Semaforo = "rojo" //En este caso no se puede asignar un valor que no se encuentre dentro de la variable de tipo semaforo, 
+                                        // ya que nos estamos refiriendo a los valores de una variable que ya estan declaradas.
+
+//Uso de tipos genericos
+
+function duplicar<T>(valor: T): T { //Que reciba un valor de tipo T es la puerta que habilita que la funcion reciba un parametro de tipo ANY, es lo que utilizamos si no sabemos que valor obtendremos en ese paarametro.
+    return valor;
+}
+
+let resultado = duplicar<number>(5); // 5
+let resultado2 = duplicar<string>("Hola"); // "Hola"
+

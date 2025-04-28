@@ -67,3 +67,32 @@ function duplicar<T>(valor: T): T { //Que reciba un valor de tipo T es la puerta
 let resultado = duplicar<number>(5); // 5
 let resultado2 = duplicar<string>("Hola"); // "Hola"
 
+//Uso de interfaces para definir la estructura de un objeto
+
+interface Usuario {
+    nombre: string;
+    edad: number;
+    esEstudiante: boolean;
+}
+
+interface Direccion {
+    calle: string;
+    ciudad: string;
+    pais: string;
+}
+
+interface UsuarioConDireccion extends Usuario, Direccion { //Interfaz que hereda de otras interfaces
+    telefono: string;
+}
+
+let usuario: UsuarioConDireccion = {
+    nombre: "Juan",
+    edad: 25,
+    esEstudiante: true,
+    calle: "Av. Siempre Viva",
+    ciudad: "Springfield",
+    pais: "USA",
+    telefono: "123456789"
+}
+
+console.log(usuario);

@@ -47,3 +47,13 @@ function duplicar(valor) {
 }
 let resultado = duplicar(5); // 5
 let resultado2 = duplicar("Hola"); // "Hola"
+let usuario = {
+    nombre: "Juan",
+    edad: 25,
+    esEstudiante: true,
+    calle: "Av. Siempre Viva",
+    ciudad: "Springfield",
+    pais: "USA",
+    telefono: "123456789"
+};
+console.log(usuario);
